@@ -1,0 +1,35 @@
+﻿<Window x:Class="Base64Encoder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Base64Encoder"
+        mc:Ignorable="d"
+        Title="Base64Encoder" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <DockPanel Margin="4,4">
+                <TextBlock>Enter the path to the file:</TextBlock>
+            </DockPanel>
+            <DockPanel Margin="4,4">
+                <TextBox Name="FileTextBox"></TextBox>
+            </DockPanel>
+            <DockPanel>
+                <Button Name="BrowseButton" Margin="10, 4, 10, 4" Content="Browse" Click="BrowseButton_Click" Width="329"></Button>
+                <Button Name="ProcessButton" Margin="4, 4, 4, 4" Content="Process" Click="ProcessButton_Click" Width="344"></Button>
+            </DockPanel>
+            <DockPanel Margin="4, 4">
+                <TextBlock Name="OutputLabel" Visibility="Hidden">Base64 String:</TextBlock>
+            </DockPanel>
+            <DockPanel Margin="4,4" Height="203">
+                <ScrollViewer>
+                    <TextBox Name="Output" IsReadOnly="True" Visibility="Hidden"></TextBox>
+                </ScrollViewer>
+            </DockPanel>
+            <DockPanel>
+                <Button Name="ClearButton" Visibility="Hidden" Margin="10, 4, 10, 4" Content="Clear" Click="ClearButton_Click" Width="329"></Button>
+            </DockPanel>
+        </StackPanel>
+
+    </Grid>
+</Window>
